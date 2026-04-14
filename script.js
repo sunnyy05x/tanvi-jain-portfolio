@@ -426,10 +426,23 @@
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
+    // Extract form values
+    const name = document.getElementById('form-name').value;
+    const subject = document.getElementById('form-subject').value || 'Contact from Portfolio';
+    const message = document.getElementById('form-message').value;
+
+    // Construct the mailto body
+    const emailBody = `Name: ${name}\n\nMessage:\n${message}`;
+    
+    // Open the user's default email client
+    window.location.href = `mailto:tanvijain87@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Visual feedback
     const btn = document.getElementById('form-submit');
     const originalHTML = btn.innerHTML;
 
-    btn.innerHTML = '<span>Message Sent! ✓</span>';
+    btn.innerHTML = '<span>Opening Mail Client... ↗</span>';
     btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
     btn.disabled = true;
 
@@ -440,7 +453,7 @@
       contactForm.reset();
       // Re-initialize lucide icons for the button
       if (window.lucide) lucide.createIcons();
-    }, 3000);
+    }, 4000);
   });
 
 
