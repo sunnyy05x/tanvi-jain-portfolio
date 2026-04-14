@@ -1336,6 +1336,7 @@ img {
   align-items: center;
   gap: 12px;
   margin-bottom: 0;
+  flex-wrap: wrap;
 }
 
 .pub-note-card .pub-note i {
