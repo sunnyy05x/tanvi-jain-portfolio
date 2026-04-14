@@ -1,0 +1,8 @@
+{
+  "name": "tanvi-jain-portfolio",
+  "version": "1.0.0",
+  "description": "3D Academic Portfolio for Dr. Tanvi Jain",
+  "scripts": {
+    "dev": "npx -y live-server --port=3000 --no-browser"
+  }
+}

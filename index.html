@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Tanvi Jain — Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Dr. Tanvi Jain — Assistant Professor specializing in Biomedical Engineering, Biotechnology, Nanoinformatics, and Stem Cells & Tissue Engineering." />
+  <meta name="keywords" content="Dr Tanvi Jain, biomedical engineering, biotechnology, nanoinformatics, tissue engineering, academic portfolio" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 3D Canvas Background -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Floating Particles Overlay -->
+  <div id="particles-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">Dr.</span> Tanvi Jain
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <i data-lucide="sparkles"></i>
+        <span>Academic Portfolio</span>
+      </div>
+      <h1 class="hero-name animate-in">
+        <span class="line">Dr. Tanvi</span>
+        <span class="line accent">Jain</span>
+      </h1>
+      <p class="hero-title animate-in">
+        Assistant Professor (Grade III) — <strong>School of Engineering &amp; Technology</strong><br />
+        BML Munjal University, Gurugram <span class="badge-naac">NAAC A Accredited</span>
+      </p>
+      <div class="hero-tags animate-in">
+        <span class="tag">Biomedical Engineering</span>
+        <span class="tag">Biotechnology</span>
+        <span class="tag">Nanoinformatics</span>
+        <span class="tag">Stem Cells &amp; Tissue Engineering</span>
+      </div>
+      <div class="hero-actions animate-in">
+        <a href="#research" class="btn btn-primary">
+          <i data-lucide="microscope"></i>
+          <span>Explore My Research</span>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i data-lucide="mail"></i>
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-stats animate-in">
+        <div class="stat-item">
+          <span class="stat-number" data-count="24">0</span>
+          <span class="stat-label">B.Tech Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="2">0</span>
+          <span class="stat-label">Patents Granted</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span>
+          <span class="stat-label">PhD Scholars</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="14">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ABOUT SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="user"></i> Introduction</span>
+        <h2 class="section-title">Profile &amp; Overview</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal-left">
+          <div class="about-icon-row">
+            <div class="about-icon"><i data-lucide="book-open"></i></div>
+            <h3>Teaching &amp; Education</h3>
+          </div>
+          <p>Committed to high-quality teaching and mentoring, with expertise in curriculum design for Biomedical Engineering and Biotechnology programs. Established the B.Tech and M.Tech Biotechnology and Biomedical Engineering programs at SRMU.</p>
+        </div>
+        <div class="about-card glass-card reveal-up">
+          <div class="about-icon-row">
+            <div class="about-icon"><i data-lucide="flask-conical"></i></div>
+            <h3>Research Focus</h3>
+          </div>
+          <p>Dedicated researcher focused on biomaterials, tissue engineering, and translational research with ongoing work in biomaterials and nanotechnology. Extensively published in SCI/Scopus indexed journals.</p>
+        </div>
+        <div class="about-card glass-card reveal-right">
+          <div class="about-icon-row">
+            <div class="about-icon"><i data-lucide="shield-check"></i></div>
+            <h3>Administration</h3>
+          </div>
+          <p>Highly skilled in managing programs, supporting learners, and handling administrative responsibilities like examination monitoring, NAAC steering committee duties, and institutional development.</p>
+        </div>
+      </div>
+      <div class="about-summary glass-card reveal-up">
+        <blockquote>
+          <i data-lucide="quote"></i>
+          Experienced academic professional with a strong record in teaching, research, and institutional development. Committed to collaborative research and advancing the frontiers of biomedical science and nanoinformatics.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- EDUCATION SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="graduation-cap"></i> Education</span>
+        <h2 class="section-title">Academic Background</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-marker">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2012 — 2016</span>
+            <h3>Ph.D.</h3>
+            <p class="timeline-institution">Motilal Nehru National Institute of Technology (MNNIT) Allahabad</p>
+            <p class="timeline-desc">Doctoral research in Biomedical Engineering with focus on biomaterials, nanoinformatics, and tissue engineering applications.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-marker">
+            <i data-lucide="book-marked"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2010 — 2012</span>
+            <h3>M.Tech — Biomedical Engineering</h3>
+            <p class="timeline-institution">Motilal Nehru National Institute of Technology (MNNIT) Allahabad</p>
+            <p class="timeline-desc">Master's specialization in Biomedical Engineering, building a strong foundation in medical device technology and bioinformatics.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-marker">
+            <i data-lucide="library"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2005 — 2009</span>
+            <h3>B.Tech — Biotechnology</h3>
+            <p class="timeline-institution">Uttar Pradesh Technical University, Lucknow</p>
+            <p class="timeline-desc">Undergraduate studies in Biotechnology with a focus on molecular biology, genetics, and bioprocess engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- EXPERIENCE SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="briefcase"></i> Career</span>
+        <h2 class="section-title">Work Experience &amp; Leadership</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card glass-card reveal-up">
+          <div class="exp-header">
+            <div class="exp-icon"><i data-lucide="building-2"></i></div>
+            <div>
+              <h3>BML Munjal University, Gurugram</h3>
+              <span class="exp-role">Assistant Professor (Grade III)</span>
+            </div>
+          </div>
+          <span class="exp-date">Feb 2026 — Present</span>
+          <ul class="exp-list">
+            <li>School of Engineering and Technology</li>
+            <li>Teaching and research in Biomedical Engineering</li>
+            <li>NAAC A Accredited institution</li>
+          </ul>
+        </div>
+        <div class="exp-card glass-card exp-featured reveal-up">
+          <div class="exp-header">
+            <div class="exp-icon"><i data-lucide="landmark"></i></div>
+            <div>
+              <h3>Shri Ramswaroop Memorial University (SRMU)</h3>
+              <span class="exp-role">Assistant Professor → Associate Professor → Professor</span>
+            </div>
+          </div>
+          <span class="exp-date">2012 — Feb 2026</span>
+          <div class="exp-badge">14 Years</div>
+          <ul class="exp-list">
+            <li>Progressed from Assistant Professor to Associate Professor, and promoted to <strong>Professor</strong> in Jan 2026</li>
+            <li>Served as <strong>Deputy Controller of Examination (Academics)</strong></li>
+            <li>Established the B.Tech and M.Tech Biotechnology and Biomedical Engineering programs</li>
+            <li>Led institutional development and NAAC steering committee initiatives</li>
+          </ul>
+        </div>
+        <div class="exp-card glass-card reveal-up">
+          <div class="exp-header">
+            <div class="exp-icon"><i data-lucide="microscope"></i></div>
+            <div>
+              <h3>AUROPROBE Laboratories</h3>
+              <span class="exp-role">BCIL Stipendiary Trainee</span>
+            </div>
+          </div>
+          <span class="exp-date">Dec 2009 — May 2010</span>
+          <ul class="exp-list">
+            <li>Biotechnology Industrial Training Program (BITP)</li>
+            <li>Hands-on laboratory research experience</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- RESEARCH SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="atom"></i> Research</span>
+        <h2 class="section-title">Research Contributions</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <!-- Metrics Counters -->
+      <div class="metrics-grid">
+        <div class="metric-card glass-card reveal-up">
+          <div class="metric-ring" data-percent="100">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="metric-value" data-count="24">0</span>
+          </div>
+          <span class="metric-label">B.Tech Projects Guided</span>
+        </div>
+        <div class="metric-card glass-card reveal-up">
+          <div class="metric-ring" data-percent="60">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="metric-value" data-count="4">0</span>
+          </div>
+          <span class="metric-label">M.Tech Projects Guided</span>
+        </div>
+        <div class="metric-card glass-card reveal-up">
+          <div class="metric-ring" data-percent="80">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="metric-value" data-count="6">0</span>
+          </div>
+          <span class="metric-label">PhD Scholars (2 Awarded, 1 Submitted, 3 In Progress)</span>
+        </div>
+        <div class="metric-card glass-card reveal-up">
+          <div class="metric-ring" data-percent="50">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="metric-value" data-count="2">0</span>
+          </div>
+          <span class="metric-label">Patents Granted</span>
+        </div>
+      </div>
+
+      <!-- Patents -->
+      <div class="patents-section reveal-up">
+        <h3 class="sub-heading"><i data-lucide="file-badge"></i> Granted Patents</h3>
+        <div class="patents-grid">
+          <div class="patent-card glass-card">
+            <div class="patent-number">01</div>
+            <h4>AI Based Electroactive Polymer Biosensor Device</h4>
+            <p>For Targeted Drug Delivery — an intelligent biosensor device utilizing electroactive polymers enhanced with AI algorithms for precision drug delivery systems.</p>
+            <span class="patent-status granted">Granted</span>
+          </div>
+          <div class="patent-card glass-card">
+            <div class="patent-number">02</div>
+            <h4>Apparatus For Preparation Of Nanolipoidal Systems</h4>
+            <p>For The Management Of Skin Cancer — a novel apparatus designed for synthesizing nanolipoidal drug delivery systems targeting skin cancer treatment.</p>
+            <span class="patent-status granted">Granted</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="publications-section reveal-up">
+        <h3 class="sub-heading"><i data-lucide="book-open-check"></i> Select Publications</h3>
+        <div class="pub-card glass-card">
+          <p>Dr. Jain has extensively published in <strong>SCI/Scopus indexed journals</strong> including:</p>
+          <div class="journal-tags">
+            <span class="journal-tag"><i data-lucide="file-text"></i> Frontiers in Health Informatics</span>
+            <span class="journal-tag"><i data-lucide="file-text"></i> Cell Biochemistry and Biophysics</span>
+            <span class="journal-tag"><i data-lucide="file-text"></i> Journal of Applied Bioanalysis</span>
+          </div>
+          <p class="pub-note">Authored multiple <strong>book chapters</strong> for <em>Elsevier</em> and <em>Springer</em> on topics including Nanomaterials, Micro RNAs, and Plant Biology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- AWARDS SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="awards" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="trophy"></i> Honors</span>
+        <h2 class="section-title">Awards &amp; Recognition</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card glass-card reveal-up">
+          <div class="award-icon"><i data-lucide="medal"></i></div>
+          <div class="award-year">2021 — 2025</div>
+          <h3>Teaching Learning Award</h3>
+          <p>Recognized for innovation in teaching methodology at SRMU across multiple academic sessions.</p>
+        </div>
+        <div class="award-card glass-card reveal-up">
+          <div class="award-icon"><i data-lucide="beaker"></i></div>
+          <div class="award-year">2014</div>
+          <h3>Indian Chemical Society Award</h3>
+          <p>Awarded for outstanding research on Sulfated chitin nanoparticles and their biomedical applications.</p>
+        </div>
+        <div class="award-card glass-card reveal-up">
+          <div class="award-icon"><i data-lucide="presentation"></i></div>
+          <div class="award-year">2015</div>
+          <h3>Best Paper Presentation</h3>
+          <p>National Seminar on Recent Advances in Polymer Science and Technology — recognized for exceptional research presentation.</p>
+        </div>
+        <div class="award-card glass-card reveal-up">
+          <div class="award-icon"><i data-lucide="newspaper"></i></div>
+          <div class="award-year">Ongoing</div>
+          <h3>Chief Editor — SRMU COMPASS</h3>
+          <p>Serving as Chief Editor of the official SRMU Newsletter, driving communication and knowledge dissemination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CONTACT SECTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="mail"></i> Reach Out</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Connect</h3>
+          <p>Whether you're interested in collaboration, research opportunities, or academic discussions — I'd love to hear from you.</p>
+          <div class="contact-items">
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Lucknow, Uttar Pradesh, India</span>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i data-lucide="phone"></i></div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+919559355403" class="contact-value">+91 9559355403</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:tanvijain87@gmail.com" class="contact-value">tanvijain87@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <div class="contact-icon"><i data-lucide="external-link"></i></div>
+              <div>
+                <span class="contact-label">ORCID</span>
+                <a href="https://orcid.org/0000-0002-1817-9577" target="_blank" rel="noopener" class="contact-value">0000-0002-1817-9577</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form id="contact-form" class="contact-form glass-card">
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label for="form-name">Full Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email Address</label>
+              <input type="email" id="form-email" name="email" placeholder="your.email@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" placeholder="Research Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <i data-lucide="send"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-accent">Dr.</span> Tanvi Jain
+          <p>Assistant Professor &amp; Researcher</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#research">Research</a>
+          <a href="#awards">Awards</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 Dr. Tanvi Jain. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
