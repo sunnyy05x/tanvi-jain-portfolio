@@ -445,6 +445,38 @@
 
 
   // ═══════════════════════════════════════════════
+  // PUBLICATIONS ACCORDION
+  // ═══════════════════════════════════════════════
+
+  const pubHeaders = document.querySelectorAll('.pub-accordion-header');
+  
+  pubHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      // Close all accordions
+      document.querySelectorAll('.pub-accordion-item').forEach(accItem => {
+        accItem.classList.remove('active');
+        accItem.querySelector('.pub-accordion-header').setAttribute('aria-expanded', 'false');
+      });
+
+      // If the clicked item was not active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Open the first accordion item by default
+  if (pubHeaders.length > 0) {
+    const firstItem = pubHeaders[0].parentElement;
+    firstItem.classList.add('active');
+    pubHeaders[0].setAttribute('aria-expanded', 'true');
+  }
+
+  // ═══════════════════════════════════════════════
   // INITIALIZE LUCIDE ICONS
   // ═══════════════════════════════════════════════
 
